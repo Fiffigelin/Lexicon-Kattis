@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Panagram")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6991f49a831d27d0c2c3fad5a7102448a9e86cd1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2614c87dd5cff940e17df8bf1f3263dd8d6f7767")]
 [assembly: System.Reflection.AssemblyProductAttribute("Panagram")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Panagram")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

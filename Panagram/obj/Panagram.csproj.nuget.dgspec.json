@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\Panagram\\Panagram.csproj": {}
+    "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\panagram\\Panagram.csproj": {}
   },
   "projects": {
-    "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\Panagram\\Panagram.csproj": {
+    "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\panagram\\Panagram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\Panagram\\Panagram.csproj",
+        "projectUniqueName": "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\panagram\\Panagram.csproj",
         "projectName": "Panagram",
-        "projectPath": "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\Panagram\\Panagram.csproj",
+        "projectPath": "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\panagram\\Panagram.csproj",
         "packagesPath": "C:\\Users\\nyman\\.nuget\\packages\\",
-        "outputPath": "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\Panagram\\obj\\",
+        "outputPath": "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\panagram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

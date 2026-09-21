@@ -1,0 +1,15 @@
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\bin\Debug\net10.0\Panagram.exe
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\bin\Debug\net10.0\Panagram.deps.json
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\bin\Debug\net10.0\Panagram.runtimeconfig.json
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\bin\Debug\net10.0\Panagram.dll
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\bin\Debug\net10.0\Panagram.pdb
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.GeneratedMSBuildEditorConfig.editorconfig
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.AssemblyInfoInputs.cache
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.AssemblyInfo.cs
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.csproj.CoreCompileInputs.cache
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.sourcelink.json
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.dll
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\refint\Panagram.dll
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.pdb
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\Panagram.genruntimeconfig.cache
+C:\GIT\== LEXICON ==\== KATTIS ==\panagram\obj\Debug\net10.0\ref\Panagram.dll
