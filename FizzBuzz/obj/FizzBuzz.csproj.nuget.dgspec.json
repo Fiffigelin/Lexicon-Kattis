@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj": {}
+    "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj": {}
   },
   "projects": {
-    "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj": {
+    "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj",
+        "projectUniqueName": "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj",
         "projectName": "FizzBuzz",
-        "projectPath": "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj",
+        "projectPath": "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\FizzBuzz.csproj",
         "packagesPath": "C:\\Users\\nyman\\.nuget\\packages\\",
-        "outputPath": "C:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\obj\\",
+        "outputPath": "c:\\GIT\\== LEXICON ==\\== KATTIS ==\\FizzBuzz\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
