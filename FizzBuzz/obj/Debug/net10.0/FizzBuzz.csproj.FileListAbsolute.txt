@@ -1,0 +1,15 @@
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\bin\Debug\net10.0\FizzBuzz.exe
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\bin\Debug\net10.0\FizzBuzz.deps.json
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\bin\Debug\net10.0\FizzBuzz.runtimeconfig.json
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\bin\Debug\net10.0\FizzBuzz.dll
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\bin\Debug\net10.0\FizzBuzz.pdb
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.AssemblyInfoInputs.cache
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.AssemblyInfo.cs
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.csproj.CoreCompileInputs.cache
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.sourcelink.json
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.dll
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\refint\FizzBuzz.dll
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.pdb
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\FizzBuzz.genruntimeconfig.cache
+C:\GIT\== LEXICON ==\== KATTIS ==\FizzBuzz\obj\Debug\net10.0\ref\FizzBuzz.dll
