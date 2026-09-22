@@ -9,7 +9,7 @@ public class Todo
 
   public Todo(string name, string desc)
   {
-    Id = Guid.NewGuid().ToString("N");
+    Id = Guid.NewGuid().ToString();
     Name = name;
     Description = desc;
     IsDone = false;
