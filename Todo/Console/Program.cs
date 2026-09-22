@@ -6,7 +6,7 @@ var todos = new List<Todo>
 {
  new Todo(name: "Klappa katten", desc: "På rygg och huvud"),
  new Todo(name: "Diska", desc: "Använd vasken i köket och inte i badrummet"),
- new Todo(name: "Diska", desc: "Använd vasken i köket och inte i badrummet"),
+ new Todo(name: "Boesta tänderna", desc: "Morgon och kväll"),
 };
 MainMenu();
 Console.ReadLine();
@@ -125,11 +125,7 @@ void ShowTodos()
 
   foreach (Todo todo in todos)
   {
-    BorderLine();
-    Console.WriteLine(todo.Name);
-    Console.WriteLine(todo.Description);
-    ShowTaskStatus(todo.IsDone);
-    BorderLine();
+    ShowTodoItem(todo);
   }
 
   var options = new[]
@@ -154,7 +150,8 @@ void ShowTodos()
     switch (val)
     {
       case "1":
-        // Skapa en funktion som visar alla val.
+        PickTodo(todos);
+        var todo = Console.ReadLine();
         break;
       case "2":
         MainMenu();
@@ -168,11 +165,63 @@ void ShowTodos()
   }
 }
 
-void BorderLine()
+void ShowTodoItem(Todo todo)
 {
   Console.ForegroundColor = ConsoleColor.DarkGray;
   Console.WriteLine("----------------------------");
   Console.ResetColor();
+  Console.WriteLine(todo.Name);
+  Console.WriteLine(todo.Description);
+  ShowTaskStatus(todo.IsDone);
+  Console.ForegroundColor = ConsoleColor.DarkGray;
+  Console.WriteLine("----------------------------");
+  Console.ResetColor();
+}
+
+void PickTodo(List<Todo> todos)
+{
+  Header();
+  var pickTodo = new List<(string id, string name)>();
+
+  for (int i = 0; i < todos.Count; i++)
+  {
+    var id = (i + 1).ToString();
+    pickTodo.Add((id, name: todos[i].Name));
+
+    Console.WriteLine($"[{i + 1}] {todos[i].Name}");
+  }
+
+  var exitNumber = (todos.Count + 1).ToString();
+  Console.ForegroundColor = ConsoleColor.DarkGray;
+  Console.WriteLine($"[{exitNumber}] Backa");
+  Console.ResetColor();
+
+  Console.WriteLine();
+  Console.Write("Välj: ");
+  var val = Console.ReadLine();
+
+  while (true)
+  {
+
+    if (pickTodo.Any(t => t.id == val))
+    {
+      // Funktion som visar todo
+      Console.WriteLine($"Du valde todo {val}");
+      return;
+    }
+    else if (exitNumber == val)
+    {
+      ShowTodos();
+      return;
+    }
+    else
+    {
+      Console.WriteLine("Ogiltigt val");
+    }
+
+    Console.Write("Välj: ");
+    val = Console.ReadLine();
+  }
 }
 
 void ShowTaskStatus(bool taskStatus)
