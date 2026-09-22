@@ -46,17 +46,26 @@ void MainMenu()
   Console.Write("Välj: ");
   var menuPick = Console.ReadLine();
 
-  switch (menuPick)
+  while (true)
   {
-    case "1":
-      AddTodo();
-      break;
-    case "2":
-      PickTodo();
-      break;
-    case "3":
-      Environment.Exit(0);
-      return;
+    switch (menuPick)
+    {
+      case "1":
+        AddTodo();
+        return;
+      case "2":
+        PickTodo();
+        return;
+      case "3":
+        Environment.Exit(0);
+        return;
+      default:
+        Console.WriteLine("Ogiltigt val");
+        Console.Write("Välj: ");
+        menuPick = Console.ReadLine();
+        break;
+
+    }
   }
 }
 
@@ -161,7 +170,6 @@ void PickTodo()
     {
       Todo todo = todos.Find(t => t.Id == pickTodo.Find(t => t.menuPick == val).id);
       ShowSingleTodo(todo);
-      Console.WriteLine($"Du valde todo {val}");
       return;
     }
     else if (exitNumber == val)
@@ -228,6 +236,7 @@ void ShowSingleTodo(Todo todo)
         ShowSingleTodo(todo);
         return;
       case "3":
+        todos.Remove(todo);
         PickTodo();
         return;
       default:
