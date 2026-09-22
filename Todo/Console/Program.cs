@@ -1,7 +1,5 @@
 ﻿
 
-using System.Drawing;
-using System.Runtime.CompilerServices;
 using TodoClass;
 
 var todos = new List<Todo>
@@ -54,7 +52,7 @@ void MainMenu()
       AddTodo();
       break;
     case "2":
-      ShowTodos();
+      PickTodo();
       break;
     case "3":
       Environment.Exit(0);
@@ -121,52 +119,6 @@ void AddTodo()
   }
 }
 
-void ShowTodos()
-{
-  Header();
-
-  foreach (Todo todo in todos)
-  {
-    ShowTodoItem(todo);
-  }
-
-  var options = new[]
-  {
-    ("[1] Öppna todo", ConsoleColor.White),
-    ("[2] Backa", ConsoleColor.DarkGray),
-  };
-
-  foreach (var (op, color) in options)
-  {
-    Console.ForegroundColor = color;
-    Console.WriteLine(op);
-    Console.ResetColor();
-  }
-
-  Console.WriteLine();
-  Console.Write("Välj: ");
-  var val = Console.ReadLine();
-
-  while (true)
-  {
-    switch (val)
-    {
-      case "1":
-        PickTodo(todos);
-        var todo = Console.ReadLine();
-        break;
-      case "2":
-        MainMenu();
-        return;
-      default:
-        Console.WriteLine("Ogiltigt val");
-        Console.Write("Välj: ");
-        val = Console.ReadLine();
-        break;
-    }
-  }
-}
-
 void ShowTodoItem(Todo todo)
 {
   Console.ForegroundColor = ConsoleColor.DarkGray;
@@ -180,7 +132,7 @@ void ShowTodoItem(Todo todo)
   Console.ResetColor();
 }
 
-void PickTodo(List<Todo> todos)
+void PickTodo()
 {
   Header();
   var pickTodo = new List<(string id, string menuPick, string name)>();
@@ -214,7 +166,7 @@ void PickTodo(List<Todo> todos)
     }
     else if (exitNumber == val)
     {
-      ShowTodos();
+      MainMenu();
       return;
     }
     else
@@ -273,10 +225,10 @@ void ShowSingleTodo(Todo todo)
         return;
       case "2":
         todo.ChangeIsDone();
-        ShowTodos();
+        ShowSingleTodo(todo);
         return;
       case "3":
-        ShowTodos();
+        PickTodo();
         return;
       default:
         Console.WriteLine("Ogiltigt val");
