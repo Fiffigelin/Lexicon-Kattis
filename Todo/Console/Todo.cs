@@ -19,4 +19,8 @@ public class Todo
   {
     IsDone = !IsDone;
   }
+  public void ChangeName(string name)
+  {
+    Name = name;
+  }
 }

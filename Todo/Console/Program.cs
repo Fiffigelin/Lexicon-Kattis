@@ -1,5 +1,7 @@
 ﻿
 
+using System.Drawing;
+using System.Runtime.CompilerServices;
 using TodoClass;
 
 var todos = new List<Todo>
@@ -181,12 +183,12 @@ void ShowTodoItem(Todo todo)
 void PickTodo(List<Todo> todos)
 {
   Header();
-  var pickTodo = new List<(string id, string name)>();
+  var pickTodo = new List<(string id, string menuPick, string name)>();
 
   for (int i = 0; i < todos.Count; i++)
   {
-    var id = (i + 1).ToString();
-    pickTodo.Add((id, name: todos[i].Name));
+    var pick = (i + 1).ToString();
+    pickTodo.Add((id: todos[i].Id, pick, name: todos[i].Name));
 
     Console.WriteLine($"[{i + 1}] {todos[i].Name}");
   }
@@ -203,9 +205,10 @@ void PickTodo(List<Todo> todos)
   while (true)
   {
 
-    if (pickTodo.Any(t => t.id == val))
+    if (pickTodo.Any(t => t.menuPick == val))
     {
-      // Funktion som visar todo
+      Todo todo = todos.Find(t => t.Id == pickTodo.Find(t => t.menuPick == val).id);
+      ShowSingleTodo(todo);
       Console.WriteLine($"Du valde todo {val}");
       return;
     }
@@ -233,5 +236,104 @@ void ShowTaskStatus(bool taskStatus)
   else
   {
     Console.WriteLine("◻");
+  }
+}
+
+void ShowSingleTodo(Todo todo)
+{
+  Header();
+  Console.WriteLine();
+
+  ShowTodoItem(todo);
+
+  var options = new[]
+  {
+    ("[1] Ändra namn", ConsoleColor.White),
+    ("[2] Ändra status", ConsoleColor.White),
+    ("[3] Radera todo", ConsoleColor.Red),
+    ("[4] Backa", ConsoleColor.DarkGray),
+  };
+
+  foreach (var (op, color) in options)
+  {
+    Console.ForegroundColor = color;
+    Console.WriteLine(op);
+    Console.ResetColor();
+  }
+  Console.WriteLine();
+  Console.Write("Välj: ");
+  var val = Console.ReadLine();
+
+  while (true)
+  {
+    switch (val)
+    {
+      case "1":
+        ChangeTodoName(todo);
+        return;
+      case "2":
+        todo.ChangeIsDone();
+        ShowTodos();
+        return;
+      case "3":
+        ShowTodos();
+        return;
+      default:
+        Console.WriteLine("Ogiltigt val");
+        Console.Write("Välj: ");
+        val = Console.ReadLine();
+        break;
+    }
+  }
+}
+
+void ChangeTodoName(Todo todo)
+{
+  var options = new[]
+  {
+    ("[1] Spara ändringar", ConsoleColor.Green),
+    ("[2] Avbryt", ConsoleColor.DarkGray),
+  };
+
+  Header();
+  Console.WriteLine();
+  Console.ForegroundColor = ConsoleColor.DarkGray;
+  Console.WriteLine($"Gammalt namn: {todo.Name}");
+  Console.ResetColor();
+  Console.Write("Ändra namn: ");
+  var name = Console.ReadLine();
+
+  Console.WriteLine();
+  foreach (var (op, color) in options)
+  {
+    Console.ForegroundColor = color;
+    Console.WriteLine(op);
+    Console.ResetColor();
+  }
+
+  Console.WriteLine();
+  Console.Write("Välj: ");
+  var val = Console.ReadLine();
+
+  while (true)
+  {
+    switch (val)
+    {
+      case "1":
+        if (name.Length > 0)
+        {
+          todo.ChangeName(name);
+        }
+        ShowSingleTodo(todo);
+        return;
+      case "2":
+        ShowSingleTodo(todo);
+        return;
+      default:
+        Console.WriteLine("Ogiltigt val");
+        Console.Write("Välj: ");
+        val = Console.ReadLine();
+        break;
+    }
   }
 }
