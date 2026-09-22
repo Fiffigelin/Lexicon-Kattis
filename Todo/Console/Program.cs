@@ -14,8 +14,13 @@ Console.ReadLine();
 static void Header()
 {
   Console.Clear();
-  Console.ForegroundColor = ConsoleColor.Cyan;
-  Console.WriteLine(" ꧁⎝ 𓆩༺TODO༻𓆪 ⎠꧂");
+  Console.ForegroundColor = ConsoleColor.DarkMagenta;
+  Console.Write(" ꧁⎝ 𓆩༺");
+  Console.ForegroundColor = ConsoleColor.White;
+  Console.Write("TODO");
+  Console.ForegroundColor = ConsoleColor.DarkMagenta;
+  Console.Write("༻𓆪 ⎠꧂");
+  Console.WriteLine();
   Console.WriteLine("✩₊˚.⋆☾⋆⁺₊✧ .⋆☾₊✩");
   Console.ResetColor();
 }
@@ -23,16 +28,18 @@ static void Header()
 static void MainMenu()
 {
   Header();
-  string[] options =
-  [
-     "[1] Lägg till todo",
-     "[2] Visa todos",
-     "[3] Avsluta"
-  ];
-
-  foreach (string op in options)
+  var options = new[]
   {
+     ("[1] Lägg till todo", ConsoleColor.White),
+     ("[2] Visa todos", ConsoleColor.White),
+     ("[3] Avsluta", ConsoleColor.Red)
+  };
+
+  foreach (var (op, color) in options)
+  {
+    Console.ForegroundColor = color;
     Console.WriteLine(op);
+    Console.ResetColor();
   }
 
   Console.WriteLine();
@@ -62,14 +69,17 @@ static void AddTodo()
   Console.Write("Beskrivning: ");
   var desc = Console.ReadLine();
 
-  string[] options = [
-    "[1] Spara",
-    "[2] Backa"
-  ];
-
-  foreach (string op in options)
+  var options = new[]
   {
+   ("[1] Spara", ConsoleColor.Green),
+  ("[2] Backa", ConsoleColor.DarkGray),
+  };
+
+  foreach (var (op, color) in options)
+  {
+    Console.ForegroundColor = color;
     Console.WriteLine(op);
+    Console.ResetColor();
   }
   Console.WriteLine();
 
