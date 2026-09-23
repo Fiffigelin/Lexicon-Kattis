@@ -34,8 +34,9 @@ void Cat()
   Console.WriteLine();
 
   var random = new Random();
+  int index;
   string[] cats = [
-    "🐱", "😻", "😻", "😻", "😻", "😻"
+    "🐱", "😻", "😹", "😸", "😼", "😿", "😾"
     ];
 
   for(int i = 1; i <= ans; i++)
@@ -47,7 +48,7 @@ void Cat()
   
     for(int J = 0; J < 2 * i - 1; J++)
     {
-      int index = random.Next(cats.Length);
+      index = random.Next(cats.Length);
       Console.Write(cats[index]);
     }
   
