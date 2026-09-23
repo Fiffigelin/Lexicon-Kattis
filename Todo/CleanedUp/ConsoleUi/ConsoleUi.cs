@@ -19,9 +19,9 @@ public class ConsoleUi
 
   public void ShowTodo(Todo todo)
   {
-    if (todo.Id != null)
+    if (todo.Id == null)
     {
-      Console.WriteLine("Kunde inte visa några todos");
+      Console.WriteLine("Kunde inte visa någon todo");
       return;
     }
 
@@ -34,8 +34,6 @@ public class ConsoleUi
     Console.ForegroundColor = ConsoleColor.DarkGray;
     Console.WriteLine("----------------------------");
     Console.ResetColor();
-
-
   }
 
   void ShowTaskStatus(bool taskStatus)

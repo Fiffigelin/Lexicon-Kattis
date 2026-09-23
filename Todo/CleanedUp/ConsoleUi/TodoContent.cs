@@ -7,7 +7,7 @@ public class TodoContent(Menu menu, ConsoleUi console, List<Todo> todos)
     List<(string id, string value, Action action)> options = new()
       {
         (id: "1", value: "Lägg till ny todo", action: CreateTodo),
-        (id: "2", value: "Visa alla todos", action: menu.Logging),
+        (id: "2", value: "Visa alla todos", action: () => ShowTodos(todos)),
         (id: "E", value: "Avsluta", action: () =>  Environment.Exit(0)),
       };
 
@@ -50,5 +50,49 @@ public class TodoContent(Menu menu, ConsoleUi console, List<Todo> todos)
     Console.Write("för att komma tillbaka till startsidan");
     Console.ReadLine();
     MainPage();
+  }
+
+  public void ShowTodos(List<Todo> todos)
+  {
+    console.Header();
+    Console.WriteLine();
+
+    var options = new List<(string id, string value, Action action)>();
+
+    for (int i = 0; i < todos.Count; i++)
+    {
+      var todo = todos[i];
+      options.Add((id: (i + 1).ToString(), value: todo.Name, action: () => ShowSingleTodo(todo)));
+    }
+
+    options.Add((id: "B", value: "Backa", action: MainPage));
+
+    menu.MenuHandler(options);
+  }
+
+  public void ShowSingleTodo(Todo todo)
+  {
+    var options = new List<(string id, string value, Action action)>()
+    {
+      (id: "Ä", value: "Ändra namn", action: ChangeName),
+      (id: "R", value: "Radera", action: () => RemoveTodo(todo)),
+      (id: "B", value: "Backa", action: () => ShowTodos(todos))
+
+    };
+    console.Header();
+    Console.WriteLine();
+
+    console.ShowTodo(todo);
+    menu.MenuHandler(options);
+  }
+
+  public void ChangeName()
+  {
+    Console.WriteLine("Ändrar namnet");
+  }
+
+  public void RemoveTodo(Todo todo)
+  {
+    todos.Remove(todo);
   }
 }

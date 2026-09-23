@@ -6,7 +6,7 @@ public class Menu()
   {
     foreach (var op in options)
     {
-      if (op.id == "E")
+      if (op.id == "E" || op.id == "R")
       {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine($"[{op.id}] {op.value}");
@@ -63,4 +63,6 @@ public class Menu()
   {
     Console.WriteLine("Gör något");
   }
+
+
 }
