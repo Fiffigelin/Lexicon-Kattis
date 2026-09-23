@@ -20,3 +20,26 @@
 //__*__
 //_***_
 //*****
+
+// I terminalen skrivs det ned uppifrån och ned.
+// Så jag kommer behöva mellanslag 4 ggr och * 1 gång
+// sedan ökas * med x2 efter varje rad.
+
+int rader = 5;
+
+for(int i = 1; i <= rader; i++)
+{
+  for(int J = 0; J < rader - i; J++)
+  {
+    Console.Write(" ");
+  }
+
+  for(int J = 0; J < 2 * i - 1; J++)
+  {
+    Console.Write("*");
+  }
+
+  Console.WriteLine();
+}
+
+Console.ReadLine();
