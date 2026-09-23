@@ -25,21 +25,35 @@
 // Så jag kommer behöva mellanslag 4 ggr och * 1 gång
 // sedan ökas * med x2 efter varje rad.
 
-int rader = 5;
+Cat();
 
-for(int i = 1; i <= rader; i++)
+void Cat()
 {
-  for(int J = 0; J < rader - i; J++)
-  {
-    Console.Write(" ");
-  }
-
-  for(int J = 0; J < 2 * i - 1; J++)
-  {
-    Console.Write("*");
-  }
-
+  Console.Write("Skriv antal rader: ");
+  var ans = int.Parse(Console.ReadLine());
   Console.WriteLine();
+
+  var random = new Random();
+  string[] cats = [
+    "🐱", "😻", "😻", "😻", "😻", "😻"
+    ];
+
+  for(int i = 1; i <= ans; i++)
+  {
+    for(int J = 0; J < ans - i; J++)
+    {
+      Console.Write("  ");
+    }
+  
+    for(int J = 0; J < 2 * i - 1; J++)
+    {
+      int index = random.Next(cats.Length);
+      Console.Write(cats[index]);
+    }
+  
+    Console.WriteLine();
+  }
+
+  Console.ReadLine();
 }
 
-Console.ReadLine();
