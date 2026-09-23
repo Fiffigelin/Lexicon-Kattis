@@ -74,7 +74,8 @@ public class TodoContent(Menu menu, ConsoleUi console, List<Todo> todos)
   {
     var options = new List<(string id, string value, Action action)>()
     {
-      (id: "Ä", value: "Ändra namn", action: ChangeName),
+      (id: "1", value: "Ändra namn", action: () => ChangeName(todo)),
+      (id: "2", value: "Ändra status", action: () => ChangeTodoStatus(todo)),
       (id: "R", value: "Radera", action: () => RemoveTodo(todo)),
       (id: "B", value: "Backa", action: () => ShowTodos(todos))
 
@@ -86,13 +87,39 @@ public class TodoContent(Menu menu, ConsoleUi console, List<Todo> todos)
     menu.MenuHandler(options);
   }
 
-  public void ChangeName()
+  public void ChangeName(Todo todo)
   {
-    Console.WriteLine("Ändrar namnet");
+    var name = string.Empty;
+
+    console.Header();
+    console.ChangeTodoName(todo);
+
+    name = Console.ReadLine();
+
+    var options = new List<(string id, string value, Action action)>()
+    {
+      (id: "S", value: "Spara", action: () => SaveNameChange(todo, name)),
+      (id: "A", value: "Avbryt", action: () => ShowSingleTodo(todo))
+    };
+
+    menu.MenuHandler(options);
   }
 
   public void RemoveTodo(Todo todo)
   {
     todos.Remove(todo);
+    ShowTodos(todos);
+  }
+
+  public void ChangeTodoStatus(Todo todo)
+  {
+    todo.ChangeIsDoneStatus();
+    ShowSingleTodo(todo);
+  }
+
+  public void SaveNameChange(Todo todo, string name)
+  {
+    todo.ChangeName(name);
+    ShowSingleTodo(todo);
   }
 }

@@ -1,4 +1,5 @@
 
+using System.Runtime.CompilerServices;
 using Class;
 
 public class ConsoleUi
@@ -46,5 +47,13 @@ public class ConsoleUi
     {
       Console.WriteLine("◻");
     }
+  }
+
+  public void ChangeTodoName(Todo todo)
+  {
+    Console.ForegroundColor = ConsoleColor.DarkGray;
+    Console.WriteLine($"Gammalt namn: {todo.Name}");
+    Console.ResetColor();
+    Console.Write("Ändra namn: ");
   }
 }
