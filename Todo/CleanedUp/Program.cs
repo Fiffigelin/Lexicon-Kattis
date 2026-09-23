@@ -12,11 +12,4 @@ Menu menu = new();
 ConsoleUi console = new();
 TodoContent content = new(menu, console, todos);
 
-List<(string id, string value, Action? action)> options = new()
-{
-  (id: "1", value: "Lägg till ny todo", action: menu.Logging),
-  (id: "2", value: "Visa alla todos", action: menu.Logging),
-  (id: "E", value: "Avsluta", action: null),
-};
-
 content.MainPage();
