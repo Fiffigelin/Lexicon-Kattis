@@ -1,1 +1,22 @@
-﻿Console.WriteLine("Hello, World!");
+﻿// Jag har alltid kämpat med den klassiska Pyramiden med * och for-loop.
+// Det som var så öppenbart för alla andra kämpade jag med... varför vet jag inte... 
+
+//Ok jag ska skriva en pyramid:
+//*
+//**
+//***
+//****
+//*****
+
+// jag vill ha den centrerad:
+//____*____
+//___***___
+//__*****__
+//_*******_
+//*********
+
+// _ = ett mellanslag.
+// Mitten är tecken nr 5 dvs höjden. Om höjden är 3 kommer mitten vara 3:
+//__*__
+//_***_
+//*****
