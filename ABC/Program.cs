@@ -1,8 +1,5 @@
 ﻿// OK ELIN! INTE GÖRA DETTA SVÅRARE ÄN VAD DET ÄR!
 
-// Input av int samt sträng
-// Console.ReadLine() gör dock allt till strängar!!
-
 // A < B < C
 // Vilket innebär att A alltid är minst och C är alltid störst
 
@@ -22,36 +19,28 @@
 
 using System;
 
-var numberInput = Console.ReadLine();
-string[] parts = numberInput.Split();
+int[] numberInput = [1,2,3];
 
-int[] numbers = new int[3];
+Array.Sort(numberInput);
 
-for (int i = 0; i < numbers.Length; i++)
-{
-  numbers[i] = int.Parse(parts[i]);
-}
-
-Array.Sort(numbers);
-
-var stringInput = Console.ReadLine();
+string[] stringInput = ["A", "C", "B"];
 string result = string.Empty;
 
-for (int i = 0; i < numbers.Length; i++)
+for (int i = 0; i < numberInput.Length; i++)
 {
-  char letter = stringInput[i];
+  string letter = stringInput[i];
 
-  if (letter == 'A')
+  if (letter == "A")
   {
-    result += numbers[0].ToString();
+    result += numberInput[0].ToString();
   }
-  else if (letter == 'B')
+  else if (letter == "B")
   {
-    result += numbers[1].ToString();
+    result += numberInput[1].ToString();
   }
-  else if (letter == 'C')
+  else if (letter == "C")
   {
-    result += numbers[2].ToString();
+    result += numberInput[2].ToString();
   }
 
   if (i < 2)
